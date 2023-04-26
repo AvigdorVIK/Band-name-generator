@@ -1,0 +1,16 @@
+// solution
+
+package kata
+
+import "strings"
+
+func bandNameGenerator(word string) string {
+
+	if word[0] == word[len(word)-1] {
+		t := len(word) - 1
+		wort := word[0:t] + word
+		return strings.Title(wort)
+	} else {
+		return "The " + strings.Title(word)
+	}
+}
